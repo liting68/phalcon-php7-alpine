@@ -1,22 +1,22 @@
-### phalcon-php7-alpine
+# phalcon-php7-alpine
 Dockerfile
-### How to use this file
+## How to use this file
 ```
 docker build -t phalcon-php7 .
 ```
-## Create container
+#### Create container
 ```
 docker run -dit --name phalcon-php7 -p 8084:80 -v D:\wwwroot\:/var/www phalcon-php7 /sbin/init
 ```
-## Entering the container
+#### Entering the container
 ```
 docker exec -it phalcon-php7 sh
 ```
-## Edit nginx phalcon config file
+#### Edit nginx phalcon config file
 ```
 vi /etc/nginx/conf.d/default.conf
 ```
-## Add server
+#### Add server
 ```
 server {
         listen          80;
@@ -50,7 +50,7 @@ server {
         }
 }
 ```
-## Rester web server
+#### Rester web server
 ```
 service nginx restart
 ```
